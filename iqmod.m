@@ -77,7 +77,7 @@ fs=fc*4;
 t=(0:n-1)/fs;
 f=fs*(0:n/2)/n;
 fftR=fftshift(abs(fft(R(t))));
-fftR=fftR(1:n/2+1);
+fftR=20*log10(fftR(1:n/2+1))-30;
 plot (f, fftR ,'k');
 
 mkdir build;
